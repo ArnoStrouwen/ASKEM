@@ -27,12 +27,10 @@ hospitalization_data = CSV.read("dataset.csv", DataFrame)
 
 From the epidemiology literature, we know that [CHIME](https://code-for-philly.gitbook.io/chime/what-is-chime/parameters) is a good starting place to model such data.
 CHIME models the evolution of the disease using the following differential equations:
-$$\begin{align}
-    \frac{dS}{dt} = -βSI\\\\
-    \frac{dI}{dt} = βSI - γI\\\\
-    \frac{dR}{dt} = + γI\\\\
-    H = δI.
-\end{align}$$
+$$\frac{dS}{dt} = -βSI$$
+$$\frac{dI}{dt} = βSI - γI$$
+$$\frac{dR}{dt} = + γI$$
+$$H = δI.$$
 In these equations $S$ stands for the number of people susceptible to COVID-19, $I$ for infected, $R$ for removed and $H$ for hospitalized.
 The goal is to estimate the parameters $β$, $γ$ and $δ$ from the experimental data.
 
